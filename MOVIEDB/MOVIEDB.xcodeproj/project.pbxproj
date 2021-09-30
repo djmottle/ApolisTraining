@@ -20,6 +20,7 @@
 		E024D3D42702120B007D5D59 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E024D3D32702120B007D5D59 /* LoginViewController.swift */; };
 		E024D41627026053007D5D59 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E024D41527026053007D5D59 /* Constant.swift */; };
 		E024D419270261DA007D5D59 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E024D418270261DA007D5D59 /* APIManager.swift */; };
+		E033926A27060ABE00A31CE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E033926927060ABE00A31CE5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E024D3D32702120B007D5D59 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E024D41527026053007D5D59 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E024D418270261DA007D5D59 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E033926927060ABE00A31CE5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				E024D39926FE69A4007D5D59 /* MovieListViewController.swift */,
+				E033926927060ABE00A31CE5 /* DetailViewController.swift */,
 				E024D3D32702120B007D5D59 /* LoginViewController.swift */,
 			);
 			path = Controller;
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E033926A27060ABE00A31CE5 /* DetailViewController.swift in Sources */,
 				E024D419270261DA007D5D59 /* APIManager.swift in Sources */,
 				E024D41627026053007D5D59 /* Constant.swift in Sources */,
 				E024D3D42702120B007D5D59 /* LoginViewController.swift in Sources */,

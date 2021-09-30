@@ -27,7 +27,8 @@ class LoginViewController: UIViewController {
             usernamelabel.isHidden = true
             if (textFieldShouldReturn(textfield2)) {
                 passwordlabel.isHidden = true
-                if let vc = self.storyboard?.instantiateViewController(identifier: "MovieListViewController") as? MovieListViewController {
+                let st = UIStoryboard.init(name: "Main", bundle: nil)
+                if let vc = st.instantiateViewController(identifier: "MovieListViewController") as? MovieListViewController {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                

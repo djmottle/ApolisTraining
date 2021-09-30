@@ -39,7 +39,7 @@ class MovieListViewController: UIViewController, APIManagerProtocol {
 }
 
 
-extension MovieListViewController: UITableViewDataSource {
+extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if !isSearching {
             return objMovieListModel?.results?.count ?? 0
@@ -66,6 +66,21 @@ extension MovieListViewController: UITableViewDataSource {
             return objMovieCell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var movie: Movie?
+        if !isSearching {
+            movie = objMovieListModel?.results?[indexPath.row]
+        }
+        if isSearching {
+            movie = tempArray[indexPath.row]
+        }
+        let st = UIStoryboard.init(name: "Main", bundle: nil)
+        if let vc = st.instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
+            vc.movie = movie
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

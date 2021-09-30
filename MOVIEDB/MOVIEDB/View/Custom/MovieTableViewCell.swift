@@ -30,6 +30,7 @@ class MovieTableViewCell: UITableViewCell {
         if let imageData = UIImage(data: data){
             imgView.image = imageData
         }
+
         nameLabel.text = movie.title
         popularityLabel.text = String((movie.popularity)!)
         ratingLabel.text = movie.release_date
