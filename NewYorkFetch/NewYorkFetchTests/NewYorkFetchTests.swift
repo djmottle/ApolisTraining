@@ -33,6 +33,8 @@ class NewYorkFetchTests: XCTestCase {
     }
 
     func testGetCount() {
+        XCTAssertEqual(vm?.getCount(),0)
+        
         vm?.get {
             DispatchQueue.main.async {
                 let arr = self.vm?.getDataArray()
@@ -41,16 +43,18 @@ class NewYorkFetchTests: XCTestCase {
         }
     }
 
-//    func testGetError() {
-//        vm?.get {
-//            DispatchQueue.main.async {
-//                let arr = self.vm?.getDataArray()
-//                XCTAssertEqual(self.vm?.getError(), arr?.results?[])
-//            }
-//        }
-//    }
+    func testGetError() {
+        XCTAssertNil(vm?.getError())
+        let exp = expectation(description: "Get")
+        vm?.get {
+            exp.fulfill()
+            XCTAssertNotNil(self.vm?.getError())
+        }
+        waitForExpectations(timeout: 5)
+    }
     
     func testGetDate() {
+        XCTAssertNil(vm?.getDate(index: 0))
         vm?.get {
             DispatchQueue.main.async {
                 let arr = self.vm?.getDataArray()
@@ -60,6 +64,7 @@ class NewYorkFetchTests: XCTestCase {
         }
     }
     func testGetURL() {
+        XCTAssertNil(vm?.getURL(index: 0))
         vm?.get {
             DispatchQueue.main.async {
                 let arr = self.vm?.getDataArray()
@@ -69,6 +74,7 @@ class NewYorkFetchTests: XCTestCase {
     }
     
     func testGetByline() {
+        XCTAssertNil(vm?.getByline(index: 0))
         vm?.get {
             DispatchQueue.main.async {
                 let arr = self.vm?.getDataArray()
